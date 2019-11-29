@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TipViewController-->
+        <!--mainScreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="TipViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="mainScreen" customModule="TipCalculatorV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainScreen" title="mainScreen" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="mainScreen" customModule="TipCalculatorV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,9 +135,9 @@
         <!--customTip-->
         <scene sceneID="fSQ-r8-9PR">
             <objects>
-                <viewController title="customTip" id="8fd-FH-6Nn" customClass="customTip" customModule="TipCalculatorV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customTip" title="customTip" modalPresentationStyle="fullScreen" id="8fd-FH-6Nn" customClass="customTip" customModule="TipCalculatorV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="08G-yC-we9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What % do you want to tip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJU-uV-ikZ">
@@ -153,8 +153,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="calculateCustom:" destination="8fd-FH-6Nn" eventType="editingChanged" id="IQ2-WU-veU"/>
-                                    <action selector="calculateCustomTip:" destination="8hq-8R-VHp" eventType="editingChanged" id="ToM-ub-RFW"/>
+                                    <action selector="calculateTip:" destination="8fd-FH-6Nn" eventType="editingChanged" id="Jdx-n9-WNn"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4B-74-xCa">
@@ -174,17 +173,17 @@
                     </view>
                     <connections>
                         <outlet property="percentLabel" destination="RBa-On-sLj" id="0au-ut-uT7"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="customTipp" id="jwJ-v5-C1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlb-jU-UsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="8hq-8R-VHp" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="vXl-Lu-AJZ">
                     <connections>
                         <action selector="onTap:" destination="8fd-FH-6Nn" id="1jS-fh-y1j"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1595.6521739130435" y="-127.23214285714285"/>
+            <point key="canvasLocation" x="1628" y="-127"/>
         </scene>
     </scenes>
 </document>
