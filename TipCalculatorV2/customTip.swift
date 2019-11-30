@@ -9,14 +9,19 @@
 import UIKit
 
 class customTip: UIViewController {
-    var tipPercent: Double = 0.0
+    
     @IBOutlet weak var percentLabel: UITextField!
+    var tipPercent: Double = 0.0
     var percent = ""
-  
-    @IBAction func calculateTip(_ sender: Any) {
+    
+    @IBAction func customTip(_ sender: Any) {
         self.percent = percentLabel.text!
         performSegue(withIdentifier: "customTipp", sender: self)
     }
+    
+    
+  
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! mainScreen

@@ -152,9 +152,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="calculateTip:" destination="8fd-FH-6Nn" eventType="editingChanged" id="Jdx-n9-WNn"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4B-74-xCa">
                                 <rect key="frame" x="258" y="102" width="23" height="36"/>
@@ -163,6 +160,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1o-2L-dbG">
+                                <rect key="frame" x="184" y="154" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="customTip:" destination="8fd-FH-6Nn" eventType="touchUpInside" id="7NQ-VF-g1k"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="customTipp" id="zHa-Qs-45p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -173,7 +179,6 @@
                     </view>
                     <connections>
                         <outlet property="percentLabel" destination="RBa-On-sLj" id="0au-ut-uT7"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="customTipp" id="jwJ-v5-C1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlb-jU-UsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,7 +188,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1628" y="-127"/>
+            <point key="canvasLocation" x="1539" y="-325"/>
         </scene>
     </scenes>
 </document>

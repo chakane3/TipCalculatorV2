@@ -30,40 +30,40 @@ class mainScreen: UIViewController {
     
     @IBAction func calculate(_ sender: Any) {
         // Get the bill amount
-        let bill = Double(totalLabel.text!) ?? 0
-        
-        // Calculate tip and total
-        let tipPercentages = [0.10, 0.15, 0.20, 0.25]
-        let tip = bill * tipPercentages[slider.selectedSegmentIndex]
-        total = bill + tip
-        
-        //totalLabel.text = String(format: "$%.2f", tip)
-        tipLabel.text = String(format: "$%.2f", tip)
-        grandTotalLabel.text = String(format:"$%.2f", total)
-//        if(customTip != ""){
-//            // Get the bill amount
-//            let bill = Double(totalLabel.text!) ?? 0
+//        let bill = Double(totalLabel.text!) ?? 0
 //
-//            // Calculate tip and total
-//            let tip = bill * (Double(customTip)!/100.00)
-//            total = bill + tip
+//        // Calculate tip and total
+//        let tipPercentages = [0.10, 0.15, 0.20, 0.25]
+//        let tip = bill * tipPercentages[slider.selectedSegmentIndex]
+//        total = bill + tip
 //
-//            //totalLabel.text = String(format: "$%.2f", tip)
-//            tipLabel.text = String(format: "$%.2f", tip)
-//            grandTotalLabel.text = String(format:"$%.2f", total)
-//        }else {
-//            // Get the bill amount
-//            let bill = Double(totalLabel.text!) ?? 0
-//
-//            // Calculate tip and total
-//            let tipPercentages = [0.10, 0.15, 0.20, 0.25]
-//            let tip = bill * tipPercentages[slider.selectedSegmentIndex]
-//            total = bill + tip
-//
-//            //totalLabel.text = String(format: "$%.2f", tip)
-//            tipLabel.text = String(format: "$%.2f", tip)
-//            grandTotalLabel.text = String(format:"$%.2f", total)
-//        }
+//        //totalLabel.text = String(format: "$%.2f", tip)
+//        tipLabel.text = String(format: "$%.2f", tip)
+//        grandTotalLabel.text = String(format:"$%.2f", total)
+        if(customTip != ""){
+            // Get the bill amount
+            let bill = Double(totalLabel.text!) ?? 0
+
+            // Calculate tip and total
+            let tip = bill * (Double(customTip)!/100.00)
+            total = bill + tip
+
+            //totalLabel.text = String(format: "$%.2f", tip)
+            tipLabel.text = String(format: "$%.2f", tip)
+            grandTotalLabel.text = String(format:"$%.2f", total)
+        }else {
+            // Get the bill amount
+            let bill = Double(totalLabel.text!) ?? 0
+
+            // Calculate tip and total
+            let tipPercentages = [0.10, 0.15, 0.20, 0.25]
+            let tip = bill * tipPercentages[slider.selectedSegmentIndex]
+            total = bill + tip
+
+            //totalLabel.text = String(format: "$%.2f", tip)
+            tipLabel.text = String(format: "$%.2f", tip)
+            grandTotalLabel.text = String(format:"$%.2f", total)
+        }
         
         
         
