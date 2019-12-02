@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9404C837238E6EE4009FB3A8 /* mainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404C836238E6EE4009FB3A8 /* mainScreen.swift */; };
 		9404C83923909C36009FB3A8 /* customTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404C83823909C36009FB3A8 /* customTip.swift */; };
+		9404C83B239267EE009FB3A8 /* splitBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404C83A239267EE009FB3A8 /* splitBill.swift */; };
 		945C1B6A23839DA000DDFECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C1B6923839DA000DDFECE /* AppDelegate.swift */; };
 		945C1B6C23839DA000DDFECE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C1B6B23839DA000DDFECE /* SceneDelegate.swift */; };
 		945C1B7123839DA000DDFECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945C1B6F23839DA000DDFECE /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		945C1B7623839DA200DDFECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945C1B7423839DA200DDFECE /* LaunchScreen.storyboard */; };
 		945C1B8123839DA200DDFECE /* TipCalculatorV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C1B8023839DA200DDFECE /* TipCalculatorV2Tests.swift */; };
 		945C1B8C23839DA200DDFECE /* TipCalculatorV2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C1B8B23839DA200DDFECE /* TipCalculatorV2UITests.swift */; };
+		947D976223946A1C007A4174 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947D976123946A1C007A4174 /* CurrencyConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* Begin PBXFileReference section */
 		9404C836238E6EE4009FB3A8 /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainScreen.swift; sourceTree = "<group>"; };
 		9404C83823909C36009FB3A8 /* customTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTip.swift; sourceTree = "<group>"; };
+		9404C83A239267EE009FB3A8 /* splitBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitBill.swift; sourceTree = "<group>"; };
 		945C1B6623839DA000DDFECE /* TipCalculatorV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculatorV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945C1B6923839DA000DDFECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945C1B6B23839DA000DDFECE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		945C1B8723839DA200DDFECE /* TipCalculatorV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		945C1B8B23839DA200DDFECE /* TipCalculatorV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorV2UITests.swift; sourceTree = "<group>"; };
 		945C1B8D23839DA200DDFECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947D976123946A1C007A4174 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				945C1B6923839DA000DDFECE /* AppDelegate.swift */,
 				945C1B6B23839DA000DDFECE /* SceneDelegate.swift */,
 				9404C836238E6EE4009FB3A8 /* mainScreen.swift */,
+				9404C83A239267EE009FB3A8 /* splitBill.swift */,
+				947D976123946A1C007A4174 /* CurrencyConverter.swift */,
 				9404C83823909C36009FB3A8 /* customTip.swift */,
 				945C1B6F23839DA000DDFECE /* Main.storyboard */,
 				945C1B7223839DA200DDFECE /* Assets.xcassets */,
@@ -263,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				945C1B6A23839DA000DDFECE /* AppDelegate.swift in Sources */,
+				9404C83B239267EE009FB3A8 /* splitBill.swift in Sources */,
 				9404C837238E6EE4009FB3A8 /* mainScreen.swift in Sources */,
+				947D976223946A1C007A4174 /* CurrencyConverter.swift in Sources */,
 				9404C83923909C36009FB3A8 /* customTip.swift in Sources */,
 				945C1B6C23839DA000DDFECE /* SceneDelegate.swift in Sources */,
 			);

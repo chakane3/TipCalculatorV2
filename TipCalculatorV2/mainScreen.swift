@@ -15,8 +15,10 @@ class mainScreen: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var grandTotalLabel: UILabel!
     @IBOutlet weak var slider: UISegmentedControl!
-    var total = 0.00
+    var total0 = 0.00
     var customTip = ""
+    var grandTotal = 0.00
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,33 +26,27 @@ class mainScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-   
+    @IBAction func onTap(_ sender: Any) {
+        // Takes away the keypad
+        view.endEditing(true)
+    }
     
     
     @IBAction func calculate(_ sender: Any) {
-        // Get the bill amount
-//        let bill = Double(totalLabel.text!) ?? 0
-//
-//        // Calculate tip and total
-//        let tipPercentages = [0.10, 0.15, 0.20, 0.25]
-//        let tip = bill * tipPercentages[slider.selectedSegmentIndex]
-//        total = bill + tip
-//
-//        //totalLabel.text = String(format: "$%.2f", tip)
-//        tipLabel.text = String(format: "$%.2f", tip)
-//        grandTotalLabel.text = String(format:"$%.2f", total)
         if(customTip != ""){
             // Get the bill amount
             let bill = Double(totalLabel.text!) ?? 0
 
             // Calculate tip and total
             let tip = bill * (Double(customTip)!/100.00)
-            total = bill + tip
+            total0 = bill + tip
 
             //totalLabel.text = String(format: "$%.2f", tip)
             tipLabel.text = String(format: "$%.2f", tip)
-            grandTotalLabel.text = String(format:"$%.2f", total)
+            grandTotalLabel.text = String(format:"$%.2f", total0)
+            
+
+            
         }else {
             // Get the bill amount
             let bill = Double(totalLabel.text!) ?? 0
@@ -58,21 +54,18 @@ class mainScreen: UIViewController {
             // Calculate tip and total
             let tipPercentages = [0.10, 0.15, 0.20, 0.25]
             let tip = bill * tipPercentages[slider.selectedSegmentIndex]
-            total = bill + tip
+            total0 = bill + tip
 
-            //totalLabel.text = String(format: "$%.2f", tip)
             tipLabel.text = String(format: "$%.2f", tip)
-            grandTotalLabel.text = String(format:"$%.2f", total)
+            grandTotalLabel.text = String(format:"$%.2f", total0)
+            total0 = Double(grandTotalLabel.text!) ?? 0
+//            performSegue(withIdentifier: "split", sender: self)
+            
         }
-        
-        
-        
     }
-   
-    
-    // Takes away the keypad from the screen when user taps
-    @IBAction func onTap(_ sender: Any) {
-        view.endEditing(true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc1 = segue.destination as! splitBill
+        vc1.total = self.total0
     }
     
     
